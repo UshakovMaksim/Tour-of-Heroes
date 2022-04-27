@@ -1,0 +1,18 @@
+<h2>Top Heroes</h2>
+<div class="heroes-menu">
+  <mat-card
+    *ngFor="let hero of heroes"
+    class="hero-card">
+    <mat-card-title-group>
+      <mat-card-title>{{ hero.name }}</mat-card-title>
+      <mat-card-subtitle>Score: {{ hero.score }}</mat-card-subtitle>
+    <mat-card-actions align="end">
+      <button mat-button routerLink="/detail/{{ hero.id }}">EDIT
+      </button>
+    </mat-card-actions>
+    </mat-card-title-group>
+    <mat-card-content>
+      {{ hero.description }}
+    </mat-card-content>
+  </mat-card>
+</div>

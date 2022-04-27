@@ -1,0 +1,17 @@
+<div *ngIf="messageService.messages.length">
+  <mat-toolbar>Messages:
+    <button type="button"
+      class="clear"
+      (click)="messageService.clear()"
+      mat-icon-button
+      [matBadge]=messageService.messages.length
+      matBadgeSize="small"
+      matBadgeColor="accent"
+    >
+      <mat-icon>clear</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div *ngFor="let message of messageService.messages">
+    {{ message }}
+  </div>
+</div>

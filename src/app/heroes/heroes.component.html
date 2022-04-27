@@ -1,0 +1,9 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a class="hero-button" routerLink="/detail/{{ hero.id }}" mat-stroked-button>
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+      <span class="score-badge">{{ (hero.score ?? 0) > 99 ? '...' : hero.score }}</span>
+    </a>
+  </li>
+</ul>

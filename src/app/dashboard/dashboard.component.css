@@ -1,0 +1,10 @@
+.hero-card {
+  width: 400px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+
+.heroes-menu {
+  display: flex;
+  flex-wrap: wrap;
+}

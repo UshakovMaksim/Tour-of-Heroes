@@ -1,0 +1,21 @@
+<mat-card *ngIf="hero" class="hero-details">
+  <mat-card-title>{{hero.name | uppercase}} Details</mat-card-title>
+  <mat-card-subtitle><span>id: </span>{{hero.id}}</mat-card-subtitle>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Hero name</mat-label>
+    <input matInput placeholder="Pikachu" [(ngModel)]="hero.name">
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Hero score</mat-label>
+    <input type="number" matInput [(ngModel)]="hero.score">
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput [(ngModel)]="hero.description"></textarea>
+  </mat-form-field>
+
+  <mat-card-actions align="end">
+    <button mat-button (click)="goBack()">Done</button>
+  </mat-card-actions>
+</mat-card>
